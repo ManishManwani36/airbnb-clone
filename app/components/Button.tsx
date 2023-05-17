@@ -35,7 +35,8 @@ export default function Button({
           ? "py-1 font-light text-sm border-[1px]"
           : "py-3 font-semibold text-md border-2"
       }
-    `}>
+    `}
+    >
       {Icon && <Icon size={24} className="absolute left-4 top-3" />}
       {label}
     </button>

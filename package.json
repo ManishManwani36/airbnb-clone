@@ -7,7 +7,29 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit": "cz"
+    "lint:fix": "next lint --fix .",
+    "lint:report": "next lint --output-file eslint-report.json --format json .",
+    "format": "prettier --write .",
+    "commit": "cz",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "next lint --fix .",
+      "git add"
+    ],
+    "*.{html,css,less}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@types/node": "20.1.7",
@@ -30,7 +52,10 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "3.3.0"
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "2.8.8"
   },
   "config": {
     "commitizen": {

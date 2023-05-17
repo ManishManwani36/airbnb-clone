@@ -96,7 +96,8 @@ export default function RegisterModal() {
           <div className="">Already have an account?</div>
           <div
             onClick={registerModal.onClose}
-            className="text-neutral-800 cursor-pointer hover:underline">
+            className="text-neutral-800 cursor-pointer hover:underline"
+          >
             Log in
           </div>
         </div>
