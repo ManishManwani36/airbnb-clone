@@ -23,12 +23,10 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
-      "next lint --fix .",
-      "git add"
+      "next lint --fix ."
     ],
     "*.{html,css,less}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "dependencies": {
