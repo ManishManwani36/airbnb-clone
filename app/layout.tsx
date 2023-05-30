@@ -4,6 +4,7 @@ import { Nunito } from "next/font/google";
 import ToasterProvider from "./providers/ToasterProvider";
 import RegisterModal from "./components/Modals/RegisterModal";
 import LoginModal from "./components/Modals/LoginModal";
+import RentModal from "./components/Modals/RentModal";
 import getCurrentUser from "./actions/getCurrentUser";
 
 const font = Nunito({ subsets: ["latin"] });
@@ -23,10 +24,11 @@ export default async function RootLayout({ children }: Props) {
     <html lang="en">
       <body className={font.className}>
         <LoginModal />
+        <RentModal />
         <RegisterModal />
         <Navbar currentUser={currentUser} />
         <ToasterProvider />
-        {children}
+        <div className="pb-20 pt-28">{children}</div>
       </body>
     </html>
   );
