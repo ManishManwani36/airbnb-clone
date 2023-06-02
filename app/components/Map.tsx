@@ -20,7 +20,7 @@ interface Props {
   center?: number[];
 }
 
-export default function Map({ center }: Props) {
+const Map: React.FC<Props> = ({ center }) => {
   return (
     <MapContainer
       center={(center as L.LatLngExpression) || [51, -0.09]}
@@ -35,4 +35,6 @@ export default function Map({ center }: Props) {
       {center && <Marker position={center as L.LatLngExpression} />}
     </MapContainer>
   );
-}
+};
+
+export default Map;
