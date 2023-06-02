@@ -16,8 +16,6 @@ const useFavorite = ({ listingId, currentUser }: IUseFavourites) => {
   const router = useRouter();
   const loginModal = useLoginModal();
 
-  console.log(listingId, currentUser, "useFavorite");
-
   const hasFavorited = useMemo(() => {
     const list = currentUser?.favouriteIds || [];
 
@@ -29,7 +27,6 @@ const useFavorite = ({ listingId, currentUser }: IUseFavourites) => {
       e.stopPropagation();
 
       if (!currentUser) {
-        console.log(currentUser, "loginModal.onOpen();");
         return loginModal.onOpen();
       }
 
