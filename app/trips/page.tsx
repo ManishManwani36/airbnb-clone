@@ -2,6 +2,7 @@ import getCurrentUser from "@app/actions/getCurrentUser";
 import getReservations from "@app/actions/getResrvations";
 import EmptyState from "@app/components/EmptyState";
 import TripsClient from "./TripsClient";
+import useLoginModal from "@app/hooks/useLoginModal";
 
 export default async function TripsPage() {
   const currentUser = await getCurrentUser();
@@ -11,6 +12,7 @@ export default async function TripsPage() {
       <EmptyState
         title="Unauthorized"
         subtitle="You must be logged in to view this page."
+        showLoginButton
       />
     );
   }

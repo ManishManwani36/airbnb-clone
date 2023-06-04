@@ -12,6 +12,7 @@ export default async function TripsPage() {
       <EmptyState
         title="Unauthorized"
         subtitle="You must be logged in to view this page."
+        showLoginButton
       />
     );
   }

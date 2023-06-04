@@ -11,6 +11,7 @@ export default async function ReservationsPage() {
       <EmptyState
         title="Unauthorized"
         subtitle="You must be signed in to view this page."
+        showLoginButton
       />
     );
   }

@@ -7,6 +7,16 @@ export default async function FavoritesPage() {
   const listings = await getFavoriteListings();
   const currentUser = await getCurrentUser();
 
+  if (!currentUser) {
+    return (
+      <EmptyState
+        title="Unauthorized"
+        subtitle="You must be signed in to view this page."
+        showLoginButton
+      />
+    );
+  }
+
   if (listings.length === 0) {
     return (
       <EmptyState
