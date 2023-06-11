@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Property Booking App (Airbnb Clone)
+
+## This project is a clone of the Airbnb web app. Designed to replicate the property listing, booking and reservation features
 
 First, run the development server:
 
